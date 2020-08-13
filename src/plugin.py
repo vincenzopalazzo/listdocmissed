@@ -8,6 +8,10 @@ from pathlib import Path
 
 plugin = Plugin()
 
+command_ok_without_doc = [
+    "doc",
+
+]
 
 @plugin.method("listdocmissed")
 def list_doc_missed(plugin, path='/tmp/lightning/'):
@@ -26,7 +30,10 @@ def list_doc_missed(plugin, path='/tmp/lightning/'):
     command_not_doc = []
     for command in help_result:
         command_name = command['command'].split()[0]
-        if not is_documented(plugin, path, command_name):
+        if not is_documented(plugin, path, command_name) \
+                and not (command['category'] == 'plugin') \
+                and not (command_name in command_ok_without_doc) \
+                and 'dev' not in command_name:
             command_not_doc.append(command_name)
 
     result = {'path-doc': path, 'commands': command_not_doc}
