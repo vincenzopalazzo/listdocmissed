@@ -1,81 +1,34 @@
-# c-lightning Project Template
+# listdocmissed a plugin for c-lightning 
 
-Getting started with a new project can be a daunting task, especially on a
-complex project like a Lightning node. This template tries to get you going as
-fast as possible, by providing a couple of utilities and a preconfigured
-environment. The environment consists of a fully fledged python project
-including tests, so you can start on your implementation without having to
-learn all the obscure incantations first.
+This plugin is made with the [lightningd/template](https://github.com/lightningd/template).
 
-## Who is this template for?
+This plugin is developed to make a quickly and complete check of the documentation RPC command inside [c-lightning](https://github.com/ElementsProject/lightning).
 
-Everybody! While primarily created to get a number of academic projects going,
-it provides an easy to extend base that can be built upon:
+## Who is this plugin for?
 
- - Researchers trying to investigate the Lightning Network can create
-   controlled network setups that highlight the aspects that they are looking
-   into.
- - Plugin developers that want to extend c-lightning have a template of a
-   plugin that can be incrementally changed to add new cool features.
- - Application developer that need a working test network they can use to test
-   their applications against.
+Everybody that want make a check if all RPC command have a documentation, so this plugin is not more util but have a big potentiality with the correct people :-) and maybe one of this people are you.
 
-## Getting Started
+In fact, is possible exend this plugin to make a template of the documentation file and make easy the life of the core developer. Fell free to open a PR.
 
-Out of the box this template provides a number of pieces that should get you
-started right away:
+## Why I developer a PR
 
- - A sample plugin in `src/plugin.py` that shows you how easy it is to write a
-   plugin to extend the existing functionality in c-lightning
- - Some tests that show how a network can be bootstrapped, and each node can
-   be configured, with or without plugins.
- - A docker image that contains the required dependencies, so you can test and
-   develop in isolation.
- - A `Makefile` that provides shortcuts to run tests and build artifacts.
+I developer this plugin because I fixed some documentation missed inside [c-lightning](https://github.com/ElementsProject/lightning), you can see the PR [here](https://github.com/ElementsProject/lightning/pull/3938).
 
-You can get started with this template by checking it out, and start hacking:
+## Run the plugin 
+
+1. Install the plugin.
 
 ```bash
-$ git clone https://github.com/lightningd/template.git my-awesome-project
-$ cd my-awesome-project
+lightning-cli plugin start /home/vincent/Github/listdocmissed/src/plugin.py
 ```
 
-Alternatively you can also download a snapshot and start with that:
+2. Run plugin.
 
-```bash
-$ wget https://github.com/lightningd/template/archive/master.zip -O my-awesome-project.zip
-$ unzip my-awesome-project.zip
-$ cd my-awesome-project
+``` bash
+lightning-cli listdocmissed /home/vincent/Github/lightning
 ```
 
-The template comes with some canned tests to illustrate how you can create a
-network, perform some actions on it, test some things, and then tear down the
-network again after the test ran. These tests can be run either directly, or
-with the provided docker image, if you don't want to install the
-dependencies. The following builds the docker image:
+## Other resources
 
-```bash
-make docker-image
-```
-
-And the following runs the tests in a docker container:
-
-```bash
-make docker-test
-```
-
-## Where to go next?
-
-Once you have familiarized yourself with how your tests can be run it's time
-to dig deeper. The followin resources should help you on your journey:
-
- - The c-lightning [Plugin API docs][plugin-docs] describe the communication
-   between c-lightning and your plugin.
- - The [pyln-client docs][pyln-client-docs] describe the JSON-RPC API client
-   (`LightningRpc`) and the `Plugin` API used to talk to c-lightning over the
-   JSON-RPC or to implement a plugin. 🚧 These docs are still under
-   construction 🚧
- 
- 
 [plugin-docs]: https://lightning.readthedocs.io/PLUGINS.html
 [pyln-client-docs]: https://pyln-client.readthedocs.io/en/pyln/api.html
