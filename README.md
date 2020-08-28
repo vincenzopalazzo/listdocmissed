@@ -10,7 +10,7 @@ Everybody that want make a check if all RPC commands have a documentation, so th
 
 In fact, is possible exend this plugin to make a template of the documentation file and make easy the life of the core developer. Fell free to open a PR.
 
-## Why I developer a PR
+## Why I developer this plugin?
 
 I developer this plugin because I fixed some documentation missed inside [c-lightning](https://github.com/ElementsProject/lightning), you can see the PR [here](https://github.com/ElementsProject/lightning/pull/3938).
 
