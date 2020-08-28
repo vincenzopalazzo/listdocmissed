@@ -10,7 +10,6 @@ plugin = Plugin()
 
 command_ok_without_doc = [
     "doc",
-
 ]
 
 @plugin.method("listdocmissed")

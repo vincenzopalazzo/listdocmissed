@@ -2,11 +2,11 @@
 
 This plugin is made with the [lightningd/template](https://github.com/lightningd/template).
 
-This plugin is developed to make a quickly and complete check of the documentation RPC command inside [c-lightning](https://github.com/ElementsProject/lightning).
+This plugin is developed to make a quickly and complete check of the RPC commands documentations inside [c-lightning](https://github.com/ElementsProject/lightning).
 
 ## Who is this plugin for?
 
-Everybody that want make a check if all RPC command have a documentation, so this plugin is not more util but have a big potentiality with the correct people :-) and maybe one of this people are you.
+Everybody that want make a check if all RPC commands have a documentation, so this plugin is not more smart :-/ but have a big potentiality with the correct people :-) and maybe one of this people are you.
 
 In fact, is possible exend this plugin to make a template of the documentation file and make easy the life of the core developer. Fell free to open a PR.
 
@@ -30,5 +30,5 @@ lightning-cli listdocmissed /home/vincent/Github/lightning
 
 ## Other resources
 
-[plugin-docs]: https://lightning.readthedocs.io/PLUGINS.html
-[pyln-client-docs]: https://pyln-client.readthedocs.io/en/pyln/api.html
+- [plugin-docs](https://lightning.readthedocs.io/PLUGINS.html)
+- [pyln-client-docs](https://pyln-client.readthedocs.io/en/pyln/api.html)
